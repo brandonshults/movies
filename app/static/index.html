@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My Movie List</title>
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css" />
+  </head>
+  <body>
+    <h1>My Movie List</h1>
+    <main>
+      <ul id="movie-list"><!-- Loaded client-side --></ul>
+
+      <form id="add-movie" action="/my-movies" method="POST">
+        <div><input type="text" name="name" /></div>
+        <div class="rating">
+          <select name="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="button"><button type="submit">add</button></div>
+      </form>
+
+    </main>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="/static/js/movie-list.js"></script>
+  </body>
+</html>

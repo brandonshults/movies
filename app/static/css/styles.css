@@ -1,0 +1,38 @@
+#movie-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+}
+
+#movie-list > li {
+    display: table;
+    width: 100%;
+}
+
+#movie-list > li > div {
+    display: table-cell;
+}
+.rating {
+    width: 100px;
+}
+.button {
+    white-space:nowrap;
+    width: 110px;
+}
+
+.button > button {
+    margin-left: 10px;
+}
+.button > button:first-child {
+    margin-left: 0;
+}
+
+#add-movie {
+    display: table;
+    max-width: 600px;
+    width: 100%;
+}
+
+#add-movie > div {
+    display: table-cell;
+}
