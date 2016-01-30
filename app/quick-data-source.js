@@ -33,14 +33,14 @@ export default class {
 
     // If there were matching movies, update the ratings with the put method,
     // if there were no matching movies this also works because Promise.all will immediately resolve
-    return Promise.all(visibleActiveMovies.map(movie => this.put(movie.id, movie.rating)))
+    return Promise.all(visibleActiveMovies.map(movie => this.put(movie.id, req)))
       .then(() => this.visibleData);
   }
 
   put(id, req) {
     this.visibleData
       .filter(movie => movie.id === id)
-      .map(movie => movie.rating = getValidRatingFromRequest(req))
+      .map(movie => movie.rating = getValidRatingFromRequest(req));
     return Promise.resolve(this.visibleData);
   }
 
